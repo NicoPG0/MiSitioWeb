@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pulpa de Frutas - Tu emprendimiento natural</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function debugMessage(message) {
+            console.log("[DEBUG] " + message);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            debugMessage("Página cargada completamente");
+        });
+
+        function agregarAlCarrito(producto) {
+            debugMessage("Producto añadido al carrito: " + producto);
+            alert("Producto añadido al carrito: " + producto);
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Pulpa de Frutas - Productos Naturales</h1>
+    <p>¡Lo mejor de la fruta directamente a tu hogar!</p>
+</header>
+
+<main>
+    <section class="quienes-somos">
+        <h2>Quiénes Somos</h2>
+        <p class="par_uno">Somos una empresa comprometida con ofrecer pulpas de frutas 100% naturales, sin aditivos ni conservantes. 
+        Trabajamos con agricultores locales para garantizar productos frescos, de alta calidad y respetuosos con el medio ambiente.</p>
+    </section>
+
+    <section class="beneficios">
+        <h2>Beneficios de nuestras pulpas</h2>
+        <p>Las pulpas de frutas que ofrecemos son 100% naturales, sin aditivos ni conservantes. ¡Una opción saludable y deliciosa para ti!</p>
+    </section>
+
+    <section class="productos">
+        <div class="producto">
+            <h3>Pulpa de Mango</h3>
+            <img src="imagenes/mango.jpg" alt="Pulpa de Mango" width="460" height="360"/>
+            <p><em>Precio: $20,000 COP por 500g</em></p>
+            <button class="btn-compra" onclick="agregarAlCarrito('Pulpa de Mango')">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Pulpa de Fresa</h3>
+            <img src="imagenes/fresa.jpg" alt="Pulpa de Fresa" width="460" height="360"/>
+            <p><em>Precio: $18,000 COP por 500g</em></p>
+            <button class="btn-compra" onclick="agregarAlCarrito('Pulpa de Fresa')">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Pulpa de Maracuyá</h3>
+            <img src="imagenes/maracuya.jpg" alt="Pulpa de Maracuyá" width="460" height="360"/>
+            <p><em>Precio: $22,000 COP por 500g</em></p>
+            <button class="btn-compra" onclick="agregarAlCarrito('Pulpa de Maracuyá')">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Pulpa de Piña</h3>
+            <img src="imagenes/piña.jpg" alt="Pulpa de piña" width="460" height="360"/>
+            <p><em>Precio: $19,000 COP por 500g</em></p>
+            <button class="btn-compra" onclick="agregarAlCarrito('Pulpa de Piña')">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Pulpa de Guayaba</h3>
+            <img src="imagenes/Guayaba.jpg" alt="Pulpa de Guayaba" width="460" height="360"/>
+            <p><em>Precio: $17,000 COP por 500g</em></p>
+            <button class="btn-compra" onclick="agregarAlCarrito('Pulpa de Guayaba')">Añadir al carrito</button>
+        </div>
+    </section>
+
+    <section class="consumo">
+        <h2>Cómo Consumir Nuestras Pulpas</h2>
+        <p id="par_dos">Las pulpas de frutas son versátiles y pueden usarse de muchas formas deliciosas:</p>
+        <ul>
+            <li>Jugos naturales: Mezcla con agua o leche y endulza al gusto.</li>
+            <li>Batidos energéticos: Agrega yogur, avena o semillas para un desayuno saludable.</li>
+            <li>Postres: Úsalas en helados, mermeladas o como topping para pancakes.</li>
+            <li>Cócteles: Prepara bebidas refrescantes combinando con licores o sodas.</li>
+        </ul>
+    </section>
+
+    <section class="testimonios">
+        <h2>Testimonios de Clientes</h2>
+        <p id="par_tres"><em>"Las pulpas de mango y maracuyá son increíbles. Se sienten súper frescas y naturales, las uso para preparar mis jugos todos los días."</em> – Andrea R.</p>
+        <p id="par_cuatro"><em>"Me encanta la calidad y el sabor de las pulpas. Además, el servicio es excelente y entregan rápido."</em> – Carlos M.</p>
+    </section>
+
+    <section class="tabla-precios">
+        <h2>Tabla de precios</h2>
+        <table border="1" cellspacing="0" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio (COP)</th>
+                    <th>Beneficios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pulpa de Mango</td>
+                    <td>$20,000</td>
+                    <td>Rica en antioxidantes y vitamina C.</td>
+                </tr>
+                <tr>
+                    <td>Pulpa de Fresa</td>
+                    <td>$18,000</td>
+                    <td>Mejora la digestión y la piel.</td>
+                </tr>
+                <tr>
+                    <td>Pulpa de Maracuyá</td>
+                    <td>$22,000</td>
+                    <td>Relaja el cuerpo y mejora el sueño.</td>
+                </tr>
+                <tr>
+                    <td>Pulpa de Piña</td>
+                    <td>$19,000</td>
+                    <td>Refrescante, rica en vitamina C y favorece la digestión.</td>
+                </tr>
+                <tr>
+                    <td>Pulpa de Guayaba</td>
+                    <td>$17,000</td>
+                    <td>Fortalece el sistema inmunológico y es rica en fibra.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>Contacta con nosotros para más información.</p>
+    <a href="mailto:contacto@pulpadfrutas.com">contacto@pulpadfrutas.com</a>
+    <br>
+    <p><a href="https://www.facebook.com/pulpadfrutas" target="_blank">Síguenos en Facebook</a></p>
+</footer>
+
+</body>
+</html>
