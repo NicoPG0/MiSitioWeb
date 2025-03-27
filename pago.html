@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Pulpa de Frutas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Confirmar Compra</h1>
+</header>
+
+<main>
+    <section class="resumen-compra">
+        <h2>Resumen del Pedido</h2>
+        <ul id="listaPago"></ul>
+        <p id="totalPago">Total a Pagar: $0</p>
+    </section>
+
+<div class="contenedor-pagos">
+    <a href="https://www.paypal.com/" class="boton-pago boton-paypal">Pagar con PayPal</a>
+    <a href="https://www.mercadopago.com.co/" class="boton-pago boton-mercadopago">Pagar con MercadoPago</a>
+    <a href="https://www.nequi.com.co/" class="boton-pago boton-nequi">Pagar con Nequi</a>
+    <a href="https://www.daviplata.com/" class="boton-pago boton-daviplata">Pagar con Daviplata</a>
+</div>
+
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const listaPago = document.getElementById("listaPago");
+        const totalPago = document.getElementById("totalPago");
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        let total = 0;
+        carrito.forEach(producto => {
+            total += producto.precio;
+            const item = document.createElement("li");
+            item.textContent = `${producto.nombre} - $${producto.precio}`;
+            listaPago.appendChild(item);
+        });
+
+        totalPago.textContent = `Total a Pagar: $${total}`;
+    });
+</script>
+
+</body>
+</html>
